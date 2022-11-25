@@ -1,17 +1,31 @@
 const quizRouter = require('express').Router();
-const Question = require('../views/Question');
+const TopicQuestions = require('../views/TopicQuestions');
+
 
 const { Quiz } = require('../db/models');
 
-quizRouter.get('/', async (req, res) => {
-  const quiz = await Quiz.findOne({
+quizRouter.get('/1', async (req, res) => {
+  const quizes = await Quiz.findAll({
     where: {
-      id: '1',
+      topic_id: 1,
     },
     raw: true,
   });
-  console.log(quiz);
-  res.renderComponent(Question, { quiz });
+console.log(quizes);
+
+  res.renderComponent(TopicQuestions, { quizes });
+});
+
+
+// параметризированный запрос
+quizRouter.get('/topic/1/:id', async (req, res) => {
+  const { id } = req.params;
+  const quizes = await Quiz.findByPk(Number(id));
+
+  res.renderComponent(TopicQuestions, {
+    quizes,
+    hideButtons: true,
+  });
 });
 
 module.exports = quizRouter;

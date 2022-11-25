@@ -12,6 +12,6 @@ expressConfig(app);
 
 app.use(ssr);
 // подключаем маршрутизацию
-app.use('/question', quizRouter);
+app.use('/topic', quizRouter);
 
 app.listen(3000, () => console.log('Server started at http://localhost:3000/'));
