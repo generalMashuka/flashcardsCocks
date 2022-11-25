@@ -13,7 +13,7 @@ function TopicQuestions({ quizes }) {
         ))}
       </div>
 
-      {/* <script src="/js/notes.js" defer /> */}
+      <script src="/js/question.js" defer />
     </Layout>
   );
 }
