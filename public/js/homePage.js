@@ -6,7 +6,7 @@ document
 
     const response = await fetch("/new_name", {
       method: "POST",
-      body: JSON.stringify({ name }),
+      body: JSON.stringify({ name: name.value }),
       headers: {
         "Content-Type": "application/json",
       },

@@ -76,6 +76,7 @@ function HomePage() {
         </div> */}
         </form>
       </div>
+      <script src="/js/homePage.js" />
     </Layout>
   );
 }

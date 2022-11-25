@@ -10,6 +10,5 @@ expressConfig(app);
 
 // подключаем маршрутизацию
 app.use("/", mainRouter);
-// app.use('/notes', notesRouter);
 
 app.listen(3000, () => console.log("Server started at http://localhost:3000/"));
