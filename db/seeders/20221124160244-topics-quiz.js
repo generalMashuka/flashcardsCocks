@@ -1,5 +1,5 @@
-const {Topic} = require('../models');
-const {Quiz} = require('../models')
+const { Topic } = require('../models');
+const { Quiz } = require('../models');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -80,6 +80,6 @@ module.exports = {
   },
 
   async down() {
-    await Person.destroy({ truncate: { cascade: true } });
+    await Topic.destroy({ truncate: { cascade: true } });
   },
 };
