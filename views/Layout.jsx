@@ -25,4 +25,3 @@ function Layout({ title, children }) {
 }
 
 module.exports = Layout;
-
