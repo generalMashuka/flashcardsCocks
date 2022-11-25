@@ -1,5 +1,5 @@
-const React = require("react");
-const Layout = require("./Layout");
+const React = require('react');
+const Layout = require('./Layout');
 
 // React-компонент
 function HomePage() {
@@ -32,7 +32,7 @@ function HomePage() {
               Выберите тему:
             </button>
             <a
-              data_id="1"
+              data-id="1"
               type="button"
               className="topic_1 list-group-item list-group-item-action"
               href="http://localhost:3000/topic/1"
@@ -40,7 +40,7 @@ function HomePage() {
               MTV 2000-х
             </a>
             <a
-              data_id="2"
+              data-id="2"
               type="button"
               className="topic_2 list-group-item list-group-item-action"
               href="http://localhost:3000/topic/2"
@@ -48,7 +48,7 @@ function HomePage() {
               Чья тень?
             </a>
             <a
-              data_id="3"
+              data-id="3"
               type="button"
               className="topic_3 list-group-item list-group-item-action"
               href="http://localhost:3000/topic/3"
