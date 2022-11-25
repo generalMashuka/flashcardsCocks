@@ -13,8 +13,6 @@ const quizRouter = require('./routes/quiz.routes');
 
 expressConfig(app);
 
-
-
 app.use(ssr);
 // подключаем маршрутизацию
 app.use('/', mainRouter);

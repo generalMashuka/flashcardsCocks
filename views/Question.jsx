@@ -3,20 +3,18 @@ const Layout = require('./Layout');
 
 function Question({ quiz }) {
   return (
-    <Layout>
-      <div className="card" style={{ width: '18rem;' }}>
+      <div data-id={quiz.id} className="card" style={{ width: '18rem;' }}>
         <img src={quiz.image} className="card-img-top" alt="..." />
         <div className="card-body">
           <p className="card-text" key={quiz.id}>{quiz.question}</p>
-          <form className="input-group flex-nowrap">
+          <form name="formQuestion" className="formQ input-group flex-nowrap">
             <span className="input-group-text" id="addon-wrapping">👀</span>
             <input name="answer" type="text" className="form-control" placeholder="ваш ответ" aria-label="Username" aria-describedby="addon-wrapping" />
             <button type="submit" className="btn btn-primary">?</button>
-            {/* <submit href="/" className="btn btn-primary">?</a> */}
+            <a href="http://localhost:3000/" className="btn btn-primary">НА ГЛАВНУЮ</a>
           </form>
         </div>
       </div>
-    </Layout>
   );
 }
 
